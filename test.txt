@@ -1,3 +1,5 @@
+https://michele.io/nodemon-babel-vscode/
+
 client - package.json
 -----------------------
 {
