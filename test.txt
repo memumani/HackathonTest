@@ -1,1 +1,133 @@
-Test file modified
+client - package.json
+-----------------------
+{
+  "name": "react-redux-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^3.0.5",
+    "react-router-bootstrap": "^0.23.3",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "1.0.11",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
+
+client - launch.json
+-----------------------
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}/src"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
+
+server-package.json
+--------------------
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "express server for mern todo app",
+  "main": "app.js",
+  "scripts": {
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bipinswarnkar1989/mern_stack_tutorial_todo_app.git"
+  },
+  "keywords": [
+    "express",
+    "server",
+    "todo",
+    "app"
+  ],
+  "author": "Bipin Swarnkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bipinswarnkar1989/mern_stack_tutorial_todo_app/issues"
+  },
+  "homepage": "https://github.com/bipinswarnkar1989/mern_stack_tutorial_todo_app#readme",
+  "dependencies": {
+    "babel-preset-es2015-node6": "^0.4.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.16.3",
+    "express-busboy": "^6.0.1",
+    "mongoose": "^4.11.7",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.17.5",
+    "source-map-support": "^0.4.16"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "sourceMaps": true,
+    "retainLines": true
+  }
+}
+
+server-launch.json
+------------------
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "diagnosticLogging": true,
+    "configurations": [
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Nodemon",
+          "runtimeExecutable": "nodemon",
+          "args": ["${workspaceRoot}/app_hooked.js"],
+          "restart": true,
+          "protocol": "inspector",
+          "stopOnEntry": false,
+          "runtimeArgs": [
+            "--nolazy",
+            "--require",
+            "babel-register"
+          ],
+          "sourceMaps": true
+      },
+  ]
+}
+
